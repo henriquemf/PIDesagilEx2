@@ -7,9 +7,9 @@ public class Video {
 	private int id;
 	private Usuario usuario;
 	private Produto produto;
-	private Map<Usuario, Integer> avaliacoes;
+	private Map<Integer, Usuario> avaliacoes;
 	
-	public Video(int id, Produto produto, Usuario usuario) {
+	public Video(int id, Usuario usuario, Produto produto) {
 		this.id = id;
 		this.usuario = usuario;
 		this.produto = produto;
@@ -17,13 +17,12 @@ public class Video {
 	}
 	
 	public void adicionaAvaliacao(Usuario usuario, int id) {
-		for (Map<Usuario, Integer> avaliacoes: avaliac) {
+		for (Map<Usuario, Integer> avaliacoes: avaliacoes) {
 	      
 	    }
 		
-		
 		if (this.avaliacoes.get(id) <= 5 && this.avaliacoes.get(id) >= 1) {
-			this.avaliacoes.put(usuario, id);
+			this.avaliacoes.put(id, usuario);
 		}
 	}
 	

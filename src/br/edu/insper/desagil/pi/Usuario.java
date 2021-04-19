@@ -12,10 +12,10 @@ public class Usuario {
 		this.videos = new ArrayList<>();
 	}
 	
-	public Video postaVideo(int id, Produto produto) {
+	public Video postaVideo(int id, Video getProduto) {
 		Video video = null;
-		video = new Video(id, produto, video);
-		videos.add(video);
+		video = new Video(id, videos, getProduto);
+		this.videos.add(video);
 		return video;
 	}
 	
