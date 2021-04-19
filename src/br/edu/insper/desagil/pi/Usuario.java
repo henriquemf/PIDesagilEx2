@@ -12,12 +12,16 @@ public class Usuario {
 		this.videos = new ArrayList<>();
 	}
 	
-	public postaVideo() {
-		
+	public Video postaVideo(int id, Produto produto) {
+		Video video = null;
+		video = new Video(id, produto, video);
+		videos.add(video);
+		return video;
 	}
 	
 	public int totalAvaliacoes() {
-		return this.avaliacoes;
+		soma += this.avaliacoes;
+		return soma;
 	}
 
 	public String getNome() {
